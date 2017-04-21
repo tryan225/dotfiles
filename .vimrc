@@ -25,6 +25,9 @@ colorscheme molokai
 " turn on this option as well
 set background=dark
 
+" Stop that stupid window
+map q: :q
+
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
@@ -46,7 +49,9 @@ set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden             " Hide buffers when they are abandoned
-"set number             " Enable line numbers
+set number              " Enable line numbers
+set cursorline          " Highlight current line
+set title               " Show the filename in the window titlebar
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
