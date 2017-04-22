@@ -3,12 +3,11 @@ set nocompatible
 
 " Backup, swap, undo
 set backup
-set backupdir=~/.vim-backup//
-set directory=~/.vim-swap//
-set undofile
-set undodir=~/.vim-undo//
+set backupdir=~/.vim-backup
 set swapfile
-set dir=~/tmp
+set directory=~/.vim-swap
+set undofile
+set undodir=~/.vim-undo
 set writebackup
 
 " Tabs as spaces
