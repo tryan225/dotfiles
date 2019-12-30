@@ -11,18 +11,19 @@ set undodir=~/.vim-undo
 set writebackup
 
 " 80 Columns + Line Numbers
-au BufRead * let &numberwidth = float2nr(log10(line("$"))) + 2
-          \| let &columns = &numberwidth + 80
+" au BufRead * let &numberwidth = float2nr(log10(line("$"))) + 2
+"          \| let &columns = &numberwidth + 80
 
-" Tabs as spaces
+" Tabs as spaces, general tab config
 set expandtab
-set tabstop=4
+set tabstop=2
+set sw=2
 
 " Default yank to host clipboard
 set clipboard=unnamed
 
 " Colorschemes @ ~/.vim/colors
-colorscheme molokai
+colorscheme monokai
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
@@ -72,3 +73,20 @@ endif
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
+
+" Spellcheck
+set spell
+
+" show tabs and trailing spaces
+set listchars=tab:»·,trail:·
+
+" Enable completion where available.
+" This setting must be set before ALE is loaded.
+let g:ale_completion_enabled = 1
+
+" filetypes
+au BufRead,BufNewFile *.pp set ft=puppet
+au BufRead,BufNewFile *.json set ft=json
+au BufRead,BufNewFile *.yaml set ft=yaml
+au BufRead,BufNewFile *.yml set ft=yaml
+
